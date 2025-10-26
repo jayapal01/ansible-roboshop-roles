@@ -7,15 +7,10 @@
   ansible.builtin.include_role:
     name: common
     tasks_from: app-setup.yaml
-  
-- name: copy mongodb repo 
-  ansible.builtin.copy:
-    src: mongodb.service
-    dest: /etc/yum.repos.d/mongo.repo
 
 - name: copy mongodb repo 
   ansible.builtin.copy:
-    src: mongodb.service
+    src: mongo.repo
     dest: /etc/yum.repos.d/mongo.repo
 
 - name: install mongodb client in the catalogue server
