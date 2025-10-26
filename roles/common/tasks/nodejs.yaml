@@ -10,6 +10,7 @@
     state: present
 
 - name: install npm dependencies
-  community.general.npm:
-    path: /app
+  ansible.builtin.command: npm install
+  args:
+      chdir: /app
    
