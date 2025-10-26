@@ -1,12 +1,14 @@
+- name: run the app setup role
+  ansible.builtin.include_role:
+    name: common
+    tasks_from: app-setup.yaml
+
 - name: run the maven setup role
   ansible.builtin.include_role:
     name: common
     tasks_from: maven-setup.yaml
 
-- name: run the app setup role
-  ansible.builtin.include_role:
-    name: common
-    tasks_from: app-setup.yaml
+
 
 - name: import data
   community.mysql.mysql_db:

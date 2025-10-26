@@ -10,6 +10,7 @@
   ansible.builtin.pip:
     name: "{{ item }}"
     state: present
+    executable: pip3.9
   loop:
   - PyMYSQL
   - cryptography
