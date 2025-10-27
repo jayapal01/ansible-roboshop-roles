@@ -15,9 +15,9 @@
     state: import
     name: all
     target: "{{ item }}"
-      # login_user: root
-      # login_password: RoboShop@1
-      # login_host: localhost   
+    login_user: root
+    login_password: RoboShop@1
+    login_host: 34.207.82.193  
   loop:
   - /app/db/schema.sql
   - /app/db/app-user.sql 
